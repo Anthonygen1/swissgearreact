@@ -1,0 +1,60 @@
+.container {
+  width: 90%;
+  @include flex(row, center, flex-start);
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 35rem;
+  margin: .3rem;
+  border: 1px solid #dadada;
+  height: 55rem;
+  padding: 2rem;
+  box-shadow: 0px 2px 9px 2px #dadada;
+  @include flex(column, flex-start, flex-start);
+  & img {
+    height: 300px;
+    align-self: center;
+  }
+  &-section {
+    margin-bottom: 2rem;
+    & h2 {
+      margin-bottom: 1rem;
+      font-weight: normal;
+      font-size: 1.4rem;
+    }
+    & h3 {
+      font-weight: normal;
+      color: #606060;
+      font-size: 1.3rem;
+    }
+    &-name {
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.section {
+  @include flex(column, center, center);
+  width: 100%;
+}
+
+.searchBar {
+  width: 100%;
+  @include flex(row, center, center);
+  margin: 2rem 0;
+  &-input {
+    width: 90%;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+.loader {
+  @include flex(column, center, center);
+  width: 100%;
+  height: 100vh;
+}

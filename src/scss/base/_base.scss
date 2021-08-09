@@ -1,0 +1,47 @@
+// This is the base settings file.
+
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+html {
+  // rem setting
+  font-size: 62.5%; // = 10px relative to 16px default
+}
+
+body {
+  // reset to the total content box
+  box-sizing: border-box;
+
+  // font settings
+  font-family: Trebuchet MS, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+  color: black;
+
+  // hide the scroll bar out of preference
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.app {
+  width: 100vw;
+  @include flex(column, flex-start, center);
+}
